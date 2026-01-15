@@ -16,6 +16,10 @@
 
 **Keywords**: tDCS, whole-brain modeling, neural mass model, epilepsy, interictal-epileptiform discharge, neuroplasticity
 
+<img width="1280" height="720" alt="Figure 3" src="https://github.com/user-attachments/assets/74996fdc-775e-4d73-8ab3-c5dd5cc2b71c" />
+
+
+
 ### Repository Structure
 
 The codebase is organized into three main directories:
@@ -72,6 +76,8 @@ whole_brain_LFP.edf: Containing the simulated Local Field Potentials for all 246
 To test the plasticity dynamics on a simple 2-node network:
 
 python src/EZ_PZ_minimal_network.py
+
+<img width="789" height="607" alt="Figure 8" src="https://github.com/user-attachments/assets/ee7d3305-9789-4a7e-805b-033d197b9f80" />
 
 
 Authors
