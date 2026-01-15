@@ -79,7 +79,3 @@ python src/EZ_PZ_minimal_network.py
 
 <img width="789" height="607" alt="Figure 8" src="https://github.com/user-attachments/assets/ee7d3305-9789-4a7e-805b-033d197b9f80" />
 
-
-Authors
-
-Alihan Kayabas
