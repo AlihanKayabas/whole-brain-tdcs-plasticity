@@ -21,7 +21,6 @@ def run_minimal_network():
     model.NbNMMs = n_regions
 
     # Initialize memory vectors (legacy calls)
-    # Note: init_vector_param comes first in legacy example, setting defaults
     model.init_vector_param()
     model.init_vector()
 
@@ -70,8 +69,7 @@ def run_minimal_network():
 
     # 4. Setup Plasticity (EZ -> PZ only)
     # -----------------------------------
-    # Note: Legacy model doesn't use 'plasticity_indices' optimization loop.
-    # It calculates plasticity for everything. We rely on the mask logic or simply
+    # We rely on the mask logic or simply
     # initialize only the relevant link and let the others evolve (or stay 0 if inputs are 0).
 
     print("Configuring Plasticity (EZ -> PZ)...")
