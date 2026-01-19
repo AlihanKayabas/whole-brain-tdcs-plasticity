@@ -1,6 +1,7 @@
 import sys
 import os
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Ensure we can import from src
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
@@ -109,25 +110,22 @@ def run_minimal_network():
 
     # 6. Plot
     # -------
-    try:
-        import matplotlib.pyplot as plt
-        time_axis = np.linspace(0, duration, steps)
+    time_axis = np.linspace(0, duration, steps)
 
-        plt.figure(figsize=(10, 6))
-        plt.plot(time_axis, results_ez, label='EZ (Region 0)')
-        plt.plot(time_axis, results_pz, label='PZ (Region 1)')
+    plt.figure(figsize=(10, 6))
+    plt.plot(time_axis, results_ez, label='EZ (Region 0)')
+    plt.plot(time_axis, results_pz, label='PZ (Region 1)')
 
-        plt.title('Minimal Network PoC [Legacy Model]: EZ driving PZ')
-        plt.xlabel('Time (s)')
-        plt.ylabel('LFP (mV)')
-        plt.legend()
-        plt.grid(True)
+    plt.title('Minimal Network PoC [Legacy Model]: EZ driving PZ')
+    plt.xlabel('Time (s)')
+    plt.ylabel('LFP (mV)')
+    plt.legend()
+    plt.grid(True)
 
-        outfile = 'minimal_network_result.png'
-        plt.savefig(outfile)
-        print(f"Plot saved to '{outfile}'")
-    except ImportError:
-        print("Matplotlib not found. Skipping plot.")
+    outfile = 'minimal_network_result.png'
+    plt.savefig(outfile)
+    print(f"Plot saved to '{outfile}'")
+
 
 if __name__ == "__main__":
     run_minimal_network()
